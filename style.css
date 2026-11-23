@@ -24,9 +24,8 @@ p {
   font-family: "Caveat", cursive;
   text-align: left;
   margin: 10px 50px;
-  flex: 1;
   min-width: 0;
-  width: 100%;
+  width: auto;
 }
 
 a {
