@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+
+html {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+/* TODO: Edit the properties below to customize your website! */
+body {
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: "Caveat", cursive;
+  font-size: 20pt;
+  margin: 20px 50px 30px 50px;
+}
+
+p {
+  font-family: "Caveat", cursive;
+  text-align: left;
+  margin: 10px 50px;
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+}
+
+a {
+  color: #334e68;
+}
+
+.bubble {
+  background-color: white;
+  border-radius: 15px;
+  width: 80%;
+  padding: 5px 0;
+  margin: 50px auto 10px auto;
+}
+
+.bubble h1 {
+  font-size: clamp(30px, 3vw, 42px);
+  font-family: "Caveat", cursive;
+  color: #27232b;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+.bubble p,
+ul {
+  font-family: "Caveat", cursive;
+  font-size: clamp(21px, 2vw, 27px);
+  line-height: 1.5;
+  color: #856779;
+}
+
+.bubble:hover {
+  background-color: #f8f8f8;
+  cursor: pointer;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(80, 60, 100, 0.15);
+}
+
+/* Edit me to change the appearance of the button! */
+button {
+  font-size: 15pt;
+  font-family: "Caveat", cursive;
+  background-color: #e8e6fa;
+  color: #243b70;
+  border: none;
+  /* for rounded corners */
+  border-radius: 50px;
+  padding: 14px 15px;
+  min-width: 120px;
+  width: fit-content;
+  max-width: 100%;
+  height: 50px;
+  margin: 10px 50px;
+  text-align: center;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+button:hover {
+  background-color: #d6c8f0;
+  cursor: pointer;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(80, 60, 100, 0.15);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* The labels */
+#label-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 12pt;
+
+  margin: 25px;
+}
+
+.scrapbook {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  width: 100%;
+  margin-top: 30px;
+  box-sizing: border-box;
+}
+
+.scrapbook p {
+  font-family: "Caveat", cursive;
+  font-size: clamp(18px, 2.5vw, 25px);
+  line-height: 1.4;
+  color: #856779;
+}
+
+.scrapbook img {
+  width: 200px;
+  height: auto;
+  flex-shrink: 0;
+  padding: 8px 8px 22px;
+  background: #fffdf9;
+  border: 1px solid #eee7df;
+  box-shadow: 2px 5px 12px rgba(0, 0, 0, 0.1);
+  transform: rotate(-3deg);
+  box-sizing: border-box;
+}
+
+.scrapbook img:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(80, 60, 100, 0.15);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+}
+
+.about-text p {
+  flex: 1;
+  min-width: 0;
+  margin: 20px 50px 30px 50px;
+  width: 100%;
+  max-width: none;
+  font-family: "Caveat", cursive;
+  font-size: clamp(20px, 2vw, 27px);
+  line-height: 1.5;
+  color: #8b6574;
+  margin: 0 0 20px;
+}
+
+@media (max-width: 600px) {
+  .scrapbook {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scrapbook img {
+    width: 160px;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+  .photo-stack {
+    width: 160px;
+  }
+}
+
+.photo-stack {
+  position: relative;
+  width: 180px;
+  flex-shrink: 0;
+  transform: rotate(-3deg);
+}
+
+.photo-stack .photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 8px 8px 22px;
+  box-sizing: border-box;
+  background: #fffdf9;
+  border: 1px solid #eee7df;
+  box-shadow: 2px 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+.photo-stack .photo-two {
+  position: absolute;
+  inset: 0;
+  animation: photoFade 10s ease-in-out infinite;
+}
+
+@keyframes photoFade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  15%,
+  45% {
+    opacity: 1;
+  }
+  60%,
+  90% {
+    opacity: 0;
+  }
+}
+
+::marker {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='10' viewBox='0 0 50 50'%3E%3Cpath d='M46.4 16.2c-2.3-2.3-5.4-3.5-8.4-4.5-.5-.2-1.1-.3-1.6-.5-1.6-1.6-3.7-2.8-6.2-3.2-1-.2-1.9.1-2.5.6-.9-.3-1.8-.6-2.7-.8-3.2-1-6.4-1.8-9.5-.1-1 .5-1.9 1.2-2.7 2-6.4 1.4-11.7 5-12.4 12.7C0 27 1.9 31.5 4.9 34.9c.1.6.2 1.1.4 1.7 1 3.2 3.3 5.7 6.7 6.5 2.7.6 5.4-.2 7.9-1.2 3.3.4 6.7.3 9.9 0 6.5-.7 13.3-2.8 17.1-8.5 3.6-5.2 4-12.6-.5-17.2zm-17.3.9c2.1.4 4 1.7 4.7 3.8 0 .5-.1 1.1-.2 1.6-.3 1.4-.8 2.6-1.6 3.7-.7.2-1.5.1-2.3-.4-.8-.4-1.6-1-2.2-1.6-.4-.4-1.2-1.7-1.6-1.9 3.4 1.3 5.1-3 3.2-5.2zm-11.6 9.7c.2-1.9 1.1-3.9 2.3-5.5-.4 2.1.3 4.2 1.7 6 1.3 1.7 3.1 3.2 5 4.2-.2.1-.4.2-.6.4-.1 0-.1.1-.2.1-3.9.2-8.7-.8-8.2-5.2zm-6.4 3.1c.1.3.1.7.2 1 .2.6.4 1.2.7 1.8-.4-.2-.7-.5-1-.7.1-.8.1-1.4.1-2.1zm31.2-1.3c-.9 1.7-2.1 3.1-3.7 4.1 2-2.1 3.4-4.7 4-7.6.2-.7.3-1.4.3-2.1.6 1.5.5 3.3-.6 5.6z'/%3E%3C/svg%3E")
+    " ";
+}
+
+li:nth-child(3n)::marker {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='10' viewBox='0 0 50 50'%3E%3Cpath d='M46.5 12.5c-.4-1.1-1.3-1.8-2.2-2-4.2-4-11.6-4.3-17.1-4.1-6.9.3-13.9 2.1-19.4 6.5C2 17.5-2.4 25.7 2.5 32.6c2.2 3.2 5.5 4.9 9 5.5 3.3 1.7 6.7 3.3 10.2 4.4 7.8 2.3 17 1.6 23.2-4.3 7.3-7 4.8-17.3 1.6-25.7zm-20.2 2.7c.6 0 1.3 0 1.8.2 1.1.4 1.7 1.3 2 2.3-1-1.2-2.4-2.1-3.8-2.5zm-1.4 6.6c.9.9 1.3 2.2-.2 2.3-2 .2-1.1-1.9.2-2.3zm-11.8 9.8c-.6-.3-2.9-1.1-3.2-1.8-.2-.5 1.4-3.1 2.1-4.2.3.5.7 1 1.2 1.4 0 .3.1.6.2.8.5 1.9 1.5 3.1 2.9 4h-.2c-.8.1-1.6.1-2.5-.1-.2 0-.3 0-.5-.1zM24 36.4c1.6-.7 3-1.5 4.3-2.5.8.2 1.7.3 2.5.5 2.5.4 5.2.9 7.7.6-.9.6-2 1.1-3 1.4-3.9 1.3-7.7 1-11.5 0z'/%3E%3C/svg%3E")
+    " ";
+}
+
+li:nth-child(3n - 1)::marker {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='10' viewBox='0 0 50 50'%3E%3Cpath d='M48.3 23.7c-1-9.9-9.9-15.6-18.8-17.8-8.2-2.1-18.8-2.6-24.6 4.8C.6 16.2 1 23.6 4.3 29.3c-.5 1-.8 2-1 3-.6 4 2 7.6 5.1 10 5.9 4.4 14 4.2 19.6-.4 1.5 0 2.9-.2 4.4-.5 1.8 0 3.5 0 5.3-.1 2.3-.1 3.5-1.9 3.5-3.7 4.5-3.3 7.7-8.2 7.1-13.9zM9.1 17.8c1.1-4.1 4.9-5.8 8.8-6.1.9-.1 1.9-.1 2.9-.1-3.2 1.6-6.3 4.6-8 7.4-.1.1-.1.2-.2.3-1.1.9-2.1 1.9-3 2.9-.2.2-.4.4-.5.6-.4-1.7-.5-3.3 0-5z'/%3E%3C/svg%3E")
+    " ";
+}

@@ -1,0 +1,58 @@
+/* STYLE SECTIONING TAGS */
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body {
+ background-color: #0C1713; 
+
+}
+
+main{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+h1,h2,h3{
+    color: #AB4967
+}
+
+p {
+    color: #A04668
+}
+
+
+/* STYLE IMAGES */
+
+
+
+
+
+
+/* STYLE NAV BAR */
+
+ul {
+  list-style-type: none;
+  background-color: #AB4967;
+  overflow: hidden;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+   text-align: center;
+}
+
+li {
+  display: inline;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+  padding: 1em;
+}
+
+li a:hover{
+  background-color: #DAC4F7;
+}
